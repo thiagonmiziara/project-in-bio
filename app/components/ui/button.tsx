@@ -5,7 +5,11 @@ interface IButtonUI extends React.HTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "ghost";
 }
 
-export default function Button({ children, variant, ...props }: IButtonUI) {
+export default function Button({
+  children,
+  variant = "primary",
+  ...props
+}: IButtonUI) {
   return (
     <button
       {...props}
