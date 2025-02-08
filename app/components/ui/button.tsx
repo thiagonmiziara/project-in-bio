@@ -8,6 +8,7 @@ interface IButtonUI extends React.HTMLAttributes<HTMLButtonElement> {
 export default function Button({ children, variant, ...props }: IButtonUI) {
   return (
     <button
+      {...props}
       className={cx(
         "p-3 text-white rounded-xl font-bold whitespace-nowrap hover:opacity-95 disabled:opacity-70",
         variant === "primary" && "bg-accent-purple",
@@ -15,7 +16,6 @@ export default function Button({ children, variant, ...props }: IButtonUI) {
         variant === "ghost" && "border-border-primary",
         props.className
       )}
-      {...props}
     >
       {children}
     </button>
