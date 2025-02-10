@@ -1,3 +1,4 @@
+import ProjectCard from "../commons/project-card";
 import TotalVisits from "../commons/total-visitis";
 import UserCard from "../commons/user-card";
 import Button from "../ui/button";
@@ -7,8 +8,9 @@ export default function Hero() {
   return (
     <div className='flex h-screen'>
       <div className='w-full flex flex-col gap-2 mt-[35vh]'>
-        <h1 className='text-5xl font-bold  text-white leading-[64px]'>
-          Seus projetos e redes sociais em um único link
+        <h1 className='text-5xl font-bold text-white leading-[64px]'>
+          Seus projetos e redes <br />
+          sociais em um único link
         </h1>
         <h2 className='text-xl leading-6'>
           Crie sua própria página de projetos e compartilhe eles com o mundo.
@@ -21,6 +23,7 @@ export default function Hero() {
           <Button>Criar agora</Button>
         </div>
       </div>
+
       <div className='w-full flex items-center justify-center bg-[radial-gradient(circle_at_50%_50%,#4b2dbb,transparent_55%)]'>
         <div className='relative'>
           <UserCard />
@@ -28,10 +31,10 @@ export default function Hero() {
             <TotalVisits />
           </div>
           <div className='absolute top-[20%] -left-[45%] -z-10'>
-            {/* <ProjectCard /> */}
+            <ProjectCard />
           </div>
           <div className='absolute -top-[5%] -left-[55%] -z-10'>
-            {/* <ProjectCard /> */}
+            <ProjectCard />
           </div>
         </div>
       </div>
