@@ -10,7 +10,7 @@ export const firebaseCert = cert({
   privateKey: privateKey
 });
 
-// Instância do app
+
 if (!getApps().length) {
   initializeApp({
     credential: firebaseCert,
